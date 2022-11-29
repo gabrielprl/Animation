@@ -14,6 +14,23 @@
     border-radius: 20px;
     display: flex;
     flex-direction: row;
+    overflow: hidden;
+}
+
+.container:hover .container__animation{
+  background: #99E2D0;
+  opacity: 1;
+  margin: 0;
+  transition: all 0.8s;
+}
+
+.container:hover .container__prise{
+  width: 35%;
+  transition: all 450ms ease-in-out;
+}
+
+.container:hover i{
+  rotate: -360deg;
 }
 
 .container__cards{
@@ -42,11 +59,17 @@
   margin-top: auto;
   margin-right: 15px;
   margin-bottom: 15px;
+  transition: all 450ms ease-in-out;
 }
 
 .container__animation{
+  opacity: 0;
+  transition: all 0.8s;
+  position: absolute;
+  right: 0;
+  margin-right: -60px;
   width: 10%;
-  height: 100px;
+  height: 96px;
   background-color: aqua;
   border-top-right-radius: 18px;
   border-bottom-right-radius: 18px;
@@ -54,5 +77,6 @@
 
 .container__animation i{
   position: relative;
+  transition: rotate 900ms;
   top: 40px;
 }
